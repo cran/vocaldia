@@ -503,12 +503,14 @@ igraph.vocaldia <- function(vd, ...){
 ##' data(vocdia)
 ##' write.vocaldia(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
 ##'                             individual=TRUE, nodecolumn='speaker'),
-##'                             file='/tmp/vocdia.dot')
+##'                             file=tempfile(pattern='vocaldia-', fileext='.dot') )
 ##' @export
 write.vocaldia <- function(vd,  file="", ...){
     o <- toDotNotation(vd,  ...)
     o <- paste('## Generated automatically by: ', format(sys.call()), o)
-    cat(o, file=file)
+    if (file!="")
+        cat("Writing ", file, '\n')
+        cat(o, file=file)
 }
 
 ##' Create vocalisation diagram to file in dot (graphviz) notation

@@ -26,5 +26,5 @@ Write a vocalisation diagram
 data(vocdia)
 write.vocaldia(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
                             individual=TRUE, nodecolumn='speaker'),
-                            file='/tmp/vocdia.dot')
+                            file=tempfile(pattern='vocaldia-', fileext='.dot') )
 }

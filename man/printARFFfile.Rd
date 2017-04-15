@@ -6,7 +6,7 @@
 \usage{
 printARFFfile(df, ids = c(), idcolumn = "id", noPauseTypes = F,
   sampled = 0, individual = TRUE, nodecolumn = "role",
-  classcolumn = "dx", file = "/tmp/ccc.arff")
+  classcolumn = "dx", file = "")
 }
 \arguments{
 \item{df}{df a data frame consisting, minimally, of a column for
@@ -31,7 +31,7 @@ them into a single Vocalisation node}
 
 \item{classcolumn}{the name of the column containing the target class (or value).}
 
-\item{file}{name of ARFF file to be generated.}
+\item{file}{name of ARFF file to be generated, or "" (print to console).}
 }
 \description{
 Generate ARFF files from vocalisation diagrams
@@ -41,10 +41,11 @@ Use this function to generate turn-taking diragrams in ARFF format for
 }
 \examples{
 data(vocdia)
+atdarff <- tempfile(pattern='vocaldia-', fileext='arff')
 printARFFfile(atddia, individual=TRUE, classcolumn='dx',
-              file='/tmp/test.arff', noPauseTypes=FALSE)
+              file=atdarff, noPauseTypes=FALSE)
 library("foreign")
-x1 <- read.arff('/tmp/test.arff')
+x1 <- read.arff(atdarff)
 x1[1:3,]
 ## remove empty columns
 x1[,c(unlist(apply(x1[1:(ncol(x1)-1)],2,sum)!=0), TRUE)]

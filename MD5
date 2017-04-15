@@ -1,8 +1,8 @@
-cf40de89b70f5c7e8615035b41f3bb09 *DESCRIPTION
+095a85fd80802b3a452cbfa12544ae6d *DESCRIPTION
 9c6b747e0a3a4e7504a8d255b07e8fc5 *NAMESPACE
-37a7a86e2ab6204f1b1021d510f009ae *NEWS.md
-fe882ffff6df09c401dc4c23559363c3 *R/markov.R
-766be4e2925dd1551440f83423450ec2 *R/vocalgraphs.R
+0e72fc623f305b835f16cd69505e61a9 *NEWS.md
+d9f9cddb6f21a90bb00d6f5e762918b5 *R/markov.R
+d80045dcff85443db549332ebf82c447 *R/vocalgraphs.R
 f3f8c792c2f9f718ad33dfcb39ae120e *data/vocdia.rda
 16503d9c1f42798aef923d8cfb7079db *man/anonymise.Rd
 06df8e3991c92899c00a932a0e41fd9e *man/atddia.Rd
@@ -22,10 +22,10 @@ d603ff29bbf9483e81f0f7fd137d2e3a *man/identifyPauses.Rd
 94cc9b235e36c6356bf0a51c9b617738 *man/namePauses.Rd
 58bb18fa970d29b85fbab61b9d98c549 *man/plot.matrixseries.Rd
 5c91ee6a743ab3a2fd133aafd0a9241c *man/plot.vocaldia.Rd
-befa013bed729311078cd5a2712e1d94 *man/printARFFfile.Rd
+25eb35067ab2358f865f7d2fbee3f04d *man/printARFFfile.Rd
 9f056e462c5fd9f1fa73f377beb3fddf *man/startmatrix.Rd
 d3684c0053f072e2925bb1121309dcdf *man/staticMatrix.Rd
 4c5664cf67eefad60194e808616c8b9b *man/toDotNotation.Rd
 0e81718d3bd7ff8bb9747efbaff2a4fc *man/vocaldia-package.Rd
 0d08c253ba7959b45b51b785589099b8 *man/vocmatrix.Rd
-623a7836fb7ce458189ffae7c29a12b0 *man/write.vocaldia.Rd
+e4ff1928c4bf8d248172ec34162e89ec *man/write.vocaldia.Rd

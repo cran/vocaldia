@@ -465,23 +465,6 @@ getTurnTakingMatrix <- function(df, begin='begin', end='end', nodecolumn='role',
   return(list(ttarray=ttarray, tdarray=tdarray))
 }
 
-## printARFFfile()
-## --------------
-## use this to generate turn-taking diragrams in ARFF format for
-## processing with, for instance, the WEKA machine learning toolkit.
-## Example:
-##
-## generateARFF(file="/tmp/t.arff", individual=T, twoclass=T)
-##
-## creates a speaker-based (individual=T) ARFF file for all entries 
-##
-## NB: This function should be improved in the following way: instead
-## of starting by printing attributes and all possible combinations,
-## one should really extract the node labels from
-## getTurnTakingMatrix(), excluding speakers that did not participate
-## (tdarray[i] == 0) and transitions that never occurred
-## (max(ttarray[i,]) == 0)
-##
 ##' Generate ARFF files from vocalisation diagrams
 ##'
 ##' Use this function to generate turn-taking diragrams in ARFF format for
@@ -501,7 +484,7 @@ getTurnTakingMatrix <- function(df, begin='begin', end='end', nodecolumn='role',
 ##' @param nodecolumn the name of the column containing the node
 ##'     (speaker) name (e.g. 'speaker', 'role').
 ##' @param classcolumn the name of the column containing the target class (or value).
-##' @param file name of ARFF file to be generated.
+##' @param file name of ARFF file to be generated, or "" (print to console).
 ##' @return NULL
 ##' @seealso
 ##'     \code{\link{getSampledVocalCountMatrix}},
@@ -514,10 +497,11 @@ getTurnTakingMatrix <- function(df, begin='begin', end='end', nodecolumn='role',
 ##'   pages 575--582, New York, NY, USA, 2013. ACM.
 ##' @examples
 ##' data(vocdia)
+##' atdarff <- tempfile(pattern='vocaldia-', fileext='arff')
 ##' printARFFfile(atddia, individual=TRUE, classcolumn='dx',
-##'               file='/tmp/test.arff', noPauseTypes=FALSE)
+##'               file=atdarff, noPauseTypes=FALSE)
 ##' library("foreign")
-##' x1 <- read.arff('/tmp/test.arff')
+##' x1 <- read.arff(atdarff)
 ##' x1[1:3,]
 ##' ## remove empty columns
 ##' x1[,c(unlist(apply(x1[1:(ncol(x1)-1)],2,sum)!=0), TRUE)]
@@ -530,7 +514,7 @@ printARFFfile <- function(df,
                           individual=TRUE,
                           nodecolumn="role",
                           classcolumn='dx',
-                          file="/tmp/ccc.arff")
+                          file="")
 {
   call <- format(sys.call())
   ## exclude dubious annotation
