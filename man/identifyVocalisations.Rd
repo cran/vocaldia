@@ -28,12 +28,12 @@ speaker (as opposed to speaker to Grp or speaker to Pause).
 
 E.g (speakers A, B, C):
 \preformatted{
-AAAAAAAABBBBBBBCCCCCBBBBBPauseBBBBSwitchingPauseAAAAAGrpVocalisation
+AAAAAAAABBBBBBBCCCCCBBBBBPauseBBBBSwitchingPauseAAAAAGrp
        ^      ^    ^    ^        ^                  ^
        |      |    |    |        |                  |
-       |      |    |    ---------------- Non-SwitchingVocalisation's
+       |      |    |    ----------- Non-SwitchingVocalisation
        |      |    |
-       ---------------------> SwitchingVocalisation's
+       ---------------------> SwitchingVocalisation
 }
 }
 \examples{

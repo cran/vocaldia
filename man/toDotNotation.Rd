@@ -36,8 +36,9 @@ Create a vocalisation diagram in dot notation
 }
 \examples{
 data(vocdia)
-toDotNotation(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
-                                    individual=TRUE, nodecolumn='speaker'))
+toDotNotation(getSampledVocalMatrix(subset(atddia,
+                                           id=='Abbott_Maddock_01'),
+                             individual=TRUE, nodecolumn='speaker'))
 }
 \seealso{
 graphviz manual

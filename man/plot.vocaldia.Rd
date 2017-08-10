@@ -4,15 +4,12 @@
 \alias{plot.vocaldia}
 \title{plot.vocaldia}
 \usage{
-\method{plot}{vocaldia}(x, ..., package = "igraph")
+\method{plot}{vocaldia}(x, ...)
 }
 \arguments{
 \item{x}{a vocalisation diagram}
 
 \item{...}{arguments for the layout algorithm}
-
-\item{package}{the package to be used for ploting (igraph
-(default) or Rgraphviz)}
 }
 \value{
 \code{NULL}
@@ -25,7 +22,7 @@ Plot a vocalisation diagram
 }
 \examples{
 data(vocdia)
-require('igraph')
-plot(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
+if (require('igraph'))
+ plot(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
                           individual=TRUE, nodecolumn='speaker'))
 }

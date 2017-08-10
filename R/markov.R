@@ -317,12 +317,12 @@ identifyPauses <- function(vocvector){
 ##'
 ##' E.g (speakers A, B, C):
 ##' \preformatted{
-##' AAAAAAAABBBBBBBCCCCCBBBBBPauseBBBBSwitchingPauseAAAAAGrpVocalisation
+##' AAAAAAAABBBBBBBCCCCCBBBBBPauseBBBBSwitchingPauseAAAAAGrp
 ##'        ^      ^    ^    ^        ^                  ^
 ##'        |      |    |    |        |                  |
-##'        |      |    |    ---------------- Non-SwitchingVocalisation's
+##'        |      |    |    ----------- Non-SwitchingVocalisation
 ##'        |      |    |
-##'        ---------------------> SwitchingVocalisation's
+##'        ---------------------> SwitchingVocalisation
 ##' }
 ##'
 ##' @title identifyVocalisations: replace appropriate vocalisation
@@ -417,23 +417,21 @@ getEntropy <- function (distribution){
 ##' Plot a vocalisation diagram
 ##' @title plot.vocaldia
 ##' @param x a vocalisation diagram
-##' @param package the package to be used for ploting (igraph
-##'     (default) or Rgraphviz)
 ##' @param ... arguments for the layout algorithm
 ##' @return \code{NULL}
 ##' @examples
 ##' data(vocdia)
-##' require('igraph')
-##' plot(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
+##' if (require('igraph'))
+##'  plot(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
 ##'                           individual=TRUE, nodecolumn='speaker'))
 ##' @export
-plot.vocaldia <- function(x, ..., package='igraph'){
-    vd <- x
-    if (requireNamespace("igraph", quietly = TRUE)){
-    ##        require('igraph')
-    g <- igraph.vocaldia(vd)
-    plot(g, layout=igraph::layout.fruchterman.reingold(g), ...)
-    return(g)
+plot.vocaldia <- function(x, ...){
+    x
+    if (requireNamespace('igraph', quietly = TRUE)){
+        ##        require('igraph')
+        g <- igraph.vocaldia(x)
+        plot(g, layout=igraph::layout.fruchterman.reingold(g), ...)
+        return(g)
     }
     ##if (requireNamespace("Rgraphviz", quietly = TRUE)){
     ##    cat('Rgraphviz support under construction. PLease use igraph instead')
@@ -449,7 +447,7 @@ plot.vocaldia <- function(x, ..., package='igraph'){
     ##     plot(g, edgeAttrs=ea, attrs=at, ...)
     ##     return(g)
     ##}
-    warning(paste('Package ',package, ' not supported. Try igraph.')) 
+    warning(paste('Package igraph not installed. Try installing igraph or "require(igraph)" if installed.')) 
 }
     
 
@@ -462,16 +460,22 @@ plot.vocaldia <- function(x, ..., package='igraph'){
 ##' @return an igraph
 ##' @examples
 ##' data(vocdia)
-##' igraph.vocaldia(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
+##' if (require('igraph'))
+##'     igraph.vocaldia(getSampledVocalMatrix(subset(atddia,
+##'                                           id=='Abbott_Maddock_01'),
 ##'                   individual=TRUE, nodecolumn='speaker'))
 ##' @export
 igraph.vocaldia <- function(vd, ...){
-    g <- igraph::graph.adjacency(vd$ttarray, weighted=T)
-    igraph::V(g)$label <- names(vd$ttarray[1,])
-    igraph::E(g)$label <- round(igraph::E(g)$weight,digits=3)
-    igraph::V(g)$size <- 25*exp(vd$tdarray)
-    g$layout <- igraph::layout.kamada.kawai(g)
-    g
+    if (requireNamespace('igraph', quietly = TRUE)){
+        g <- igraph::graph.adjacency(vd$ttarray, weighted=T)
+        igraph::V(g)$label <- names(vd$ttarray[1,])
+        igraph::E(g)$label <- round(igraph::E(g)$weight,digits=3)
+        igraph::V(g)$size <- 25*exp(vd$tdarray)
+        g$layout <- igraph::layout.kamada.kawai(g)
+        return(g)
+    }
+    else
+        warning(paste('Package igraph not supported. Try installing igraph or "require(igraph)" if installed.')) 
 }
 
 ## ##' Create a graphNEL vocalisation diagram
@@ -501,9 +505,10 @@ igraph.vocaldia <- function(vd, ...){
 ##' @return \code{NULL}
 ##' @examples
 ##' data(vocdia)
-##' write.vocaldia(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
-##'                             individual=TRUE, nodecolumn='speaker'),
-##'                             file=tempfile(pattern='vocaldia-', fileext='.dot') )
+##' write.vocaldia(getSampledVocalMatrix(subset(atddia,
+##'                                             id=='Abbott_Maddock_01'),
+##'                        individual=TRUE, nodecolumn='speaker'),
+##'                        file=tempfile(pattern='vocaldia-', fileext='.dot'))
 ##' @export
 write.vocaldia <- function(vd,  file="", ...){
     o <- toDotNotation(vd,  ...)
@@ -528,12 +533,15 @@ write.vocaldia <- function(vd,  file="", ...){
 ##' @return character data containing the diagram in dot format.
 ##' @examples
 ##' data(vocdia)
-##' toDotNotation(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
-##'                                     individual=TRUE, nodecolumn='speaker'))
+##' toDotNotation(getSampledVocalMatrix(subset(atddia,
+##'                                            id=='Abbott_Maddock_01'),
+##'                              individual=TRUE, nodecolumn='speaker'))
 ##' @seealso graphviz manual
 ##' @export
-toDotNotation <- function(vd, individual=T, varsizenode=T, shape='circle',
-                          fontsize=16, rankdir='LR', nodeattribs='fixedsize=true;',
+toDotNotation <- function(vd, individual=T, varsizenode=T,
+                          shape='circle',
+                          fontsize=16, rankdir='LR',
+                          nodeattribs='fixedsize=true;',
                           comment="")
 {
   head <- paste("## diagram generated by vocalgraphs.r\n## ", comment,

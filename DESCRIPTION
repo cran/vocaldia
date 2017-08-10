@@ -3,7 +3,7 @@ LazyData: true
 Package: vocaldia
 Type: Package
 Title: Create and Manipulate Vocalisation Diagrams
-Version: 0.8.1
+Version: 0.8.2
 Date: 2017-04-03
 Authors@R: person("Saturnino", "Luz", email = "luzs@acm.org", role = c("aut", "cre"))
 Description: Create adjacency matrices of vocalisation graphs from
@@ -22,8 +22,8 @@ Suggests: igraph, foreign
 Imports: graphics
 RoxygenNote: 6.0.1.9000
 NeedsCompilation: no
-Packaged: 2017-04-15 13:37:35 UTC; luzs
+Packaged: 2017-08-10 10:06:55 UTC; luzs
 Author: Saturnino Luz [aut, cre]
 Maintainer: Saturnino Luz <luzs@acm.org>
 Repository: CRAN
-Date/Publication: 2017-04-15 13:53:44 UTC
+Date/Publication: 2017-08-10 15:12:04 UTC

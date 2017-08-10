@@ -22,6 +22,8 @@ Create a vocalisation diagram
 }
 \examples{
 data(vocdia)
-igraph.vocaldia(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
+if (require('igraph'))
+    igraph.vocaldia(getSampledVocalMatrix(subset(atddia,
+                                          id=='Abbott_Maddock_01'),
                   individual=TRUE, nodecolumn='speaker'))
 }

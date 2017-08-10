@@ -421,7 +421,8 @@ getTurnTakingProbMatrix <- function(df, individual=FALSE, ...)
 ##' getTurnTakingMatrix(x)
 ##' getTurnTakingMatrix(x, individual=TRUE)
 ##' @export
-getTurnTakingMatrix <- function(df, begin='begin', end='end', nodecolumn='role', 
+getTurnTakingMatrix <- function(df, begin='begin', end='end',
+                                nodecolumn='role', 
                                 individual=FALSE, noPauseTypes=FALSE)
 {
     ##df <- subset(df, df$id %in% ids)

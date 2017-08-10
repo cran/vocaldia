@@ -24,7 +24,8 @@ Write a vocalisation diagram
 }
 \examples{
 data(vocdia)
-write.vocaldia(getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
-                            individual=TRUE, nodecolumn='speaker'),
-                            file=tempfile(pattern='vocaldia-', fileext='.dot') )
+write.vocaldia(getSampledVocalMatrix(subset(atddia,
+                                            id=='Abbott_Maddock_01'),
+                       individual=TRUE, nodecolumn='speaker'),
+                       file=tempfile(pattern='vocaldia-', fileext='.dot'))
 }
