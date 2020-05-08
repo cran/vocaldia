@@ -54,12 +54,12 @@
 ##'
 ##' A \code{vocaldia} object containing a 3-speaker dialogue 
 ##'
-##' @format A list containing 2 arrayes
+##' @format A list containing 2 arrays
 ##' \describe{
 ##'   \item{ttarray}{The vocaldia adjacency matrix}
 ##'   \item{tdarray}{The proportional durations (stationary probabilities) of each event (node)}
 ##' }
-##' @source This dataset was generated from the Multomodal Leatrning
+##' @source This dataset was generated from the Multomodal Learning
 ##'     Analytics dataset, for the eponymous ICMI'13 Grand
 ##'     Challenge. The use these vocaldias were put to is described in
 ##'     Luz (2013). The full dataset and code is available

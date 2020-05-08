@@ -4,9 +4,17 @@
 \alias{printARFFfile}
 \title{printARFFfile: Create arff files by creating and flattening vocaldias}
 \usage{
-printARFFfile(df, ids = c(), idcolumn = "id", noPauseTypes = F,
-  sampled = 0, individual = TRUE, nodecolumn = "role",
-  classcolumn = "dx", file = "")
+printARFFfile(
+  df,
+  ids = c(),
+  idcolumn = "id",
+  noPauseTypes = F,
+  sampled = 0,
+  individual = TRUE,
+  nodecolumn = "role",
+  classcolumn = "dx",
+  file = ""
+)
 }
 \arguments{
 \item{df}{df a data frame consisting, minimally, of a column for

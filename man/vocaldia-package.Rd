@@ -7,16 +7,16 @@
 \title{vocaldia: Create and Manipulate Vocalisation Diagrams}
 \description{
 Create adjacency matrices of vocalisation graphs from
-dataframes containing sequences of speech and silence intervals,
-transforming these matrices into Markov diagrams, and generating
-datasets for classification of these diagrams by 'flattening' them
-and adding global properties (functionals) etc.  Vocalisation
-diagrams date back to early work in psychiatry (Jaffe and Feldstein,
-1970) and social psychology (Dabbs and Ruback, 1987) but have only
-recently been employed as a data representation method for machine
-learning tasks including meeting segmentation (Luz, 2012)
-<doi:10.1145/2328967.2328970> and classification (Luz,
-2013) <doi:10.1145/2522848.2533788>.
+  dataframes containing sequences of speech and silence intervals,
+  transforming these matrices into Markov diagrams, and generating
+  datasets for classification of these diagrams by 'flattening' them
+  and adding global properties (functionals) etc.  Vocalisation
+  diagrams date back to early work in psychiatry (Jaffe and Feldstein,
+  1970) and social psychology (Dabbs and Ruback, 1987) but have only
+  recently been employed as a data representation method for machine
+  learning tasks including meeting segmentation (Luz, 2012)
+  <doi:10.1145/2328967.2328970> and classification (Luz,
+  2013) <doi:10.1145/2522848.2533788>.
 }
 \references{
 S. Luz. Automatic identification of experts and performance
@@ -36,6 +36,14 @@ S. Luz. Automatic identification of experts and performance
   Jaffe , J. and Feldstein, S. Rhythms of
   dialogue. ser. \emph{Personality and Psychopathology}. Academic
   Press, New York, 1976.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://git.ecdf.ed.ac.uk/sluzfil/vocaldia}
+  \item Report bugs at \url{https://git.ecdf.ed.ac.uk/sluzfil/vocaldia/issues}
+}
+
 }
 \author{
 Saturnino Luz \email{luzs@acm.org}

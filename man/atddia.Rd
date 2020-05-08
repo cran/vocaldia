@@ -4,7 +4,8 @@
 \name{atddia}
 \alias{atddia}
 \title{A sample Medical Team Meeting dialogue encoded as a vocaldia}
-\format{A data frame with 7869 rows and 7 variables:
+\format{
+A data frame with 7869 rows and 7 variables:
 \describe{
   \item{id}{The dialogue indentifier}
   \item{begin}{The start time of a speech turn or silence interval}
@@ -13,7 +14,8 @@
   \item{role}{The speaker's role (patient, interviewer, other, or Floor}
   \item{trans}{The transcription of the turn (blanked out for anonymity)}
   \item{dx}{The diagnosis (ad or nonad}
- }}
+ }
+}
 \source{
 This dataset was generated from the Carolina Conversations
     Collection, and used in the work described in De La Fuente,

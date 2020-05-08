@@ -4,8 +4,14 @@
 \alias{getTurnTakingMatrix}
 \title{getSampledVocalCountMatrix: generate vocalisation diagrams}
 \usage{
-getTurnTakingMatrix(df, begin = "begin", end = "end", nodecolumn = "role",
-  individual = FALSE, noPauseTypes = FALSE)
+getTurnTakingMatrix(
+  df,
+  begin = "begin",
+  end = "end",
+  nodecolumn = "role",
+  individual = FALSE,
+  noPauseTypes = FALSE
+)
 }
 \arguments{
 \item{df}{a data frame consisting, minimally, of a column for

@@ -4,9 +4,16 @@
 \alias{toDotNotation}
 \title{toDotNotation: conver vocaldia to graphviz dot notation}
 \usage{
-toDotNotation(vd, individual = T, varsizenode = T, shape = "circle",
-  fontsize = 16, rankdir = "LR", nodeattribs = "fixedsize=true;",
-  comment = "")
+toDotNotation(
+  vd,
+  individual = T,
+  varsizenode = T,
+  shape = "circle",
+  fontsize = 16,
+  rankdir = "LR",
+  nodeattribs = "fixedsize=true;",
+  comment = ""
+)
 }
 \arguments{
 \item{vd}{a vocalisation diagram}

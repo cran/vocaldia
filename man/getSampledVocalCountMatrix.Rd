@@ -4,9 +4,15 @@
 \alias{getSampledVocalCountMatrix}
 \title{getSampledVocalCountMatrix: generate vocalisation diagrams}
 \usage{
-getSampledVocalCountMatrix(cdf, rate = 1, individual = FALSE,
-  noPauseTypes = FALSE, begin = "begin", end = "end",
-  nodecolumn = "role")
+getSampledVocalCountMatrix(
+  cdf,
+  rate = 1,
+  individual = FALSE,
+  noPauseTypes = FALSE,
+  begin = "begin",
+  end = "end",
+  nodecolumn = "role"
+)
 }
 \arguments{
 \item{cdf}{a data frame consisting, minimally, of a column for

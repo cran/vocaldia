@@ -192,10 +192,12 @@ plot.matrixseries <- function(x, ...,
 ##' @param mseries a matrixseries object
 ##' @return the initial matrix.
 ##' @examples
+##' \dontrun{
 ##' data(vocdia)
 ##' x2 <- staticMatrix(vocmatrix$ttarray, digits=4, history=TRUE)
 ##' ## original matrix
-##'  startmatrix(x2)
+##' startmatrix(x2)
+##' }
 ##' @rdname startmatrix
 ##' @export startmatrix
 startmatrix <- function(mseries) UseMethod('startmatrix')
@@ -229,17 +231,19 @@ startmatrix.matrixseries <- function(mseries){
 ##'     \eqn{s_1,...,s_n} s.t. \eqn{s_1} is the speaker who spoke the least
 ##'     and \eqn{s_n} the one who did the most talking.
 ##' @rdname anonymise
-##' @examples
-##' data(vocdia)
-##' x2 <- getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
-##'                             individual=TRUE, nodecolumn='speaker')
-##' anonymise(x2)
 ##' @export anonymise
 anonymise <- function(vd) UseMethod('anonymise')
 
 ##' @rdname anonymise
 ##' @method anonymise vocaldia
 ##' @S3method anonymise vocaldia
+##' @examples
+##' \dontrun{
+##' data(vocdia)
+##' x2 <- getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
+##'                             individual=TRUE, nodecolumn='speaker')
+##' anonymise(x2)
+##' }
 anonymise.vocaldia <- function(vd){
   excluded <- c(categories, "Grp", "Floor")
   ## get array of speakers sorted decreasingly by accumulated turn duration 

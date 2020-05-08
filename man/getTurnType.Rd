@@ -4,8 +4,13 @@
 \alias{getTurnType}
 \title{getTurnType: return type of turn}
 \usage{
-getTurnType(df, i, individual = FALSE, nodecolumn = "speaker",
-  noPauseTypes = F)
+getTurnType(
+  df,
+  i,
+  individual = FALSE,
+  nodecolumn = "speaker",
+  noPauseTypes = F
+)
 }
 \arguments{
 \item{df}{a data frame consisting, minimally, of a column for

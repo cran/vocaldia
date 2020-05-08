@@ -25,8 +25,10 @@ Access initital matrix in a \code{matrixseries}
 Access initital matrix in a \code{matrixseries}
 }
 \examples{
+\dontrun{
 data(vocdia)
 x2 <- staticMatrix(vocmatrix$ttarray, digits=4, history=TRUE)
 ## original matrix
- startmatrix(x2)
+startmatrix(x2)
+}
 }

@@ -30,8 +30,10 @@ the speaker who spoke the least and \eqn{s_n} the one who did the most
 talking.
 }
 \examples{
+\dontrun{
 data(vocdia)
 x2 <- getSampledVocalMatrix(subset(atddia, id=='Abbott_Maddock_01'),
                             individual=TRUE, nodecolumn='speaker')
 anonymise(x2)
+}
 }
