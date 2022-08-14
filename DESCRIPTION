@@ -3,8 +3,8 @@ LazyData: true
 Package: vocaldia
 Type: Package
 Title: Create and Manipulate Vocalisation Diagrams
-Version: 0.8.3
-Date: 2020-05-07
+Version: 0.8.4
+Date: 2022-08-14
 Authors@R: person("Saturnino", "Luz", email = "luzs@acm.org", role = c("aut", "cre"))
 Description: Create adjacency matrices of vocalisation graphs from
   dataframes containing sequences of speech and silence intervals,
@@ -20,13 +20,13 @@ Description: Create adjacency matrices of vocalisation graphs from
 Depends: R (>= 3.0.0)
 Suggests: igraph, foreign
 Imports: graphics, stats, utils
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.1
 Encoding: UTF-8
 URL: https://git.ecdf.ed.ac.uk/sluzfil/vocaldia
-BugReports: https://git.ecdf.ed.ac.uk/sluzfil/vocaldia/issues
+BugReports: https://git.ecdf.ed.ac.uk/sluzfil/vocaldia/-issues
 NeedsCompilation: no
-Packaged: 2020-05-08 10:55:43 UTC; luzs
+Packaged: 2022-08-14 20:30:26 UTC; luzs
 Author: Saturnino Luz [aut, cre]
 Maintainer: Saturnino Luz <luzs@acm.org>
 Repository: CRAN
-Date/Publication: 2020-05-08 11:10:02 UTC
+Date/Publication: 2022-08-14 20:40:02 UTC

@@ -1,12 +1,13 @@
-55f9bea59ea9e1e8ef2e301bcc42e9d7 *DESCRIPTION
+452d832848b11893b59349c928f973bc *DESCRIPTION
 112001b3d269d0ac406441a9b59b4753 *NAMESPACE
-ed3d73faf06eb75cb09a40a9ec041d07 *NEWS.md
-d68005a3c268045d8d272b14e5b28272 *R/dbank.R
-52daa159be8db6a59373a40ef6dffb22 *R/markov.R
+813ccc32056b1c57d1f63964ec3834d6 *NEWS.md
+22c0fe9c1da7a98566b7ee4c84ba1e1c *R/dbank.R
+57a9a51c8c9c0e09faebd62e5e0bc868 *R/markov.R
 717ee6426c9fdbfb75598ab8f4f88cb2 *R/vocalgraphs.R
 4bbc7f70f93810ce1e074d845254421c *README.md
+176e033eef0852636ab08c1cec501cce *build/partial.rdb
 f3f8c792c2f9f718ad33dfcb39ae120e *data/vocdia.rda
-bbc303703f85117dd75d7c0e9ffee20d *man/anonymise.Rd
+230a86d44c0a03f870e8e6207e7c0bcd *man/anonymise.Rd
 d20e6db41b03480f14e32ce45b1893a2 *man/appendSpeechRate.Rd
 3a14749fa1108c0ec1dd523074b14c1f *man/atddia.Rd
 26ad5f77d916f99bded40bc00da20192 *man/getEntropy.Rd
@@ -37,6 +38,6 @@ ca14a635ef2b2824d285c5da7de639db *man/plot.vocaldia.Rd
 75c5a63ba719e0df47c4f40b19e5b7b0 *man/startmatrix.Rd
 d3684c0053f072e2925bb1121309dcdf *man/staticMatrix.Rd
 0357bc4630cf1b01de079f723b329514 *man/toDotNotation.Rd
-a14b21e324196861c68d5377f2c78b61 *man/vocaldia-package.Rd
+e56565a18390b27c73d429c8866c1245 *man/vocaldia-package.Rd
 5bc493144a0a718ae16a0496244c7c03 *man/vocmatrix.Rd
 b48ac9c2c6142be1d4e0620bc8de1ee2 *man/write.vocaldia.Rd

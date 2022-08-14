@@ -134,7 +134,6 @@ appendSpeechRate <- function(t,
     t
 }
 
-
 ##' getSyllablesAndSilences: process Praat's grid for syllable nuclei, based on De Jong's approach 
 ##'
 ##' @title getSyllablesAndSilences: process Praat's grid for syllable nuclei

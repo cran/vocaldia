@@ -25,7 +25,7 @@ Anonymise a vocalisation diagram
 }
 \details{
 "anonymise" a \code{vocaldia} turn taking probability matrix by
-replacing speaker names by variables \eqn{s_1,...,s_n$ s.t. $s_1} is
+replacing speaker names by variables \eqn{s_1,...,s_n s.t. s_1} is
 the speaker who spoke the least and \eqn{s_n} the one who did the most
 talking.
 }
